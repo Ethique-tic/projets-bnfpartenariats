@@ -149,6 +149,15 @@ font-weight: 900;
 	color: #cfcfcf;
 }
 
+#tf-home.acteurs{
+	background: url(../livres.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #cfcfcf;
+}
+
 #tf-acceuil{
 	background: url(../img/BNF1.jpg);
 	background-size: cover;
@@ -772,7 +781,7 @@ button.btn.tf-btn.btn-default {
 #arbre_total{
 	margin-left: 15%;
 	width:800px;
-	height:450px;
+	height:2702px;
 	background: url('img/arbre.png') 0 0px;
 	/*clip: rect(0, 800px, 450px, 0);*/
 	/* clip: shape(top, right, bottom, left);  'rect' is the only available option */
@@ -793,6 +802,52 @@ button.btn.tf-btn.btn-default {
 #M:hover ~#arbre_total{
 	background: url('img/arbre.png') 0 -800px;
 }
+
+#image_acteurs{
+	margin-right: 5%;
+	border-radius: 50px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #222222;
+	display: block;
+}
+#comission_eur:hover ~ .nicomede2{
+	display: none;
+}
+#ministere:hover ~ #image_acteurs{
+	display: none;
+}
+#savoircom1:hover ~ #image_acteurs{
+	display: none;
+}
+#interassociation:hover ~ #image_acteurs{
+	display: none;
+}
+#bnf_acteur:hover ~ #image_acteurs{
+	display: none;
+}
+#bnfpartenariat_acteur:hover ~ #image_acteurs{
+	display: none;
+}
+#proquest_acteur:hover ~ #image_acteurs{
+	display: none;
+}
+#apple_acteur:hover ~ #image_acteurs{
+	display: none;
+}
+#believe_acteur:hover ~ #image_acteurs{
+	display: none;
+}
+#comission_educ:hover ~ #image_acteurs{
+	display: none;
+}
+#cada:hover ~ #image_acteurs{
+	display: none;
+}
+#consnatnum:hover ~ #image_acteurs{
+	display: none;
+}
+
 
 /* Footer */
 nav#footer{

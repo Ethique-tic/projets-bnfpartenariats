@@ -27,8 +27,13 @@
         <link rel="stylesheet" type="text/css" href="CSS_Files/style2.css">
         <link rel="stylesheet" type="text/css" href="CSS_Files/responsive.css">
 
+        <link rel="stylesheet" type="text/css" href="CSS_Files/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="CSS_Files/styles2.css" />
+
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+
         <link rel="icon" href="favicon4.ico" type="image/x-icon">
         <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
@@ -53,10 +58,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a href="acceuil.html">Accueil</a></li>
-                      <li><a href="partenariats.html">Frise et Partenariats</a></li>
-                      <li><a href="#tf-home" class="page-scroll">Arbre des débats</a></li>
-                      <li><a href="acteurs.html">Graphe des acteurs</a></li>
+                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="partenariats.html">Chronologie</a></li>
+                      <li><a href="#tf-home" class="page-scroll">Débats</a></li>
+                      <li><a href="acteurs.html">Acteurs</a></li>
                       <li><a href="conclusion.html">Conclusion</a></li>
                       <li><a href="glossaire.html">Glossaire</a></li>
                       <li><a href="sources.html">Sources</a></li>
@@ -78,16 +83,109 @@
                 </div>
             </div>
 
+            <!--<div id="arbre_test" class="text-center"></div>-->
+
             <div id="tf-about" class="container carte">
-                <img id= "arbre_test" src="img/transparent.png" alt="salut" />
-                <img id="arbre_total" src="img/arbre.png" border="0" width="800" height="2702" orgWidth="800" orgHeight="2702" usemap="arbre_des_debats" alt="" />
+                <!--<img id= "arbre_test" src="img/transparent.png" alt="salut" />-->
+                <div class="pres_arbre">
+                    <p>
+                        <span class="donotmiss">passez la souris</span> sur les liens qui lient les différents éléments de
+                        l'<span class="color"><strong>arbre des débats</strong></span>.
+                    </p>
+                </div>
+                <img id="arbre_total" src="img/transparent.png" border="0" width="800" height="450" orgWidth="800" orgHeight="450" usemap="arbre_des_debats" alt="" />
                 <map name="arbre_des_debats" id="arbre_des_debats">
-                    <area id="M" alt="" title="M" href="#" shape="rect" coords="377,94,427,358" style="outline:none;" target="_self"/>
-                    <area id="LH" alt="" title="LH" href="#" shape="poly" coords="334,80,313,75,260,90,239,148,232,191,253,196" style="outline:none;" target="_self" />
-                    <area id="RH" alt="" title="RH" href="#" shape="poly" coords="490,71,480,91,495,111,522,130,540,160,548,184,569,189,570,163,528,103" style="outline:none;" target="_self"     />
-                    <area id="RB" alt="" title="RB" href="#" shape="poly" coords="577,269,548,268,536,289,521,320,494,347,463,360,462,393,516,369,561,319" style="outline:none;" target="_self"     />
-                    <area id="LB" alt="" title="LB" href="#" shape="poly" coords="334,358,329,380,301,371,264,348,242,323,228,274,228,264,246,260,289,314" style="outline:none;" target="_self"     />
+                    <area id="M" alt="" title="" href="#" shape="rect" coords="377,94,427,358" style="outline:none;" target="_self"/>
+                    <area id="LH" alt="" title="" href="#" shape="poly" coords="334,80,313,75,260,90,239,148,232,191,253,196" style="outline:none;" target="_self" />
+                    <area id="RH" alt="" title="" href="#" shape="poly" coords="490,71,480,91,495,111,522,130,540,160,548,184,569,189,570,163,528,103" style="outline:none;" target="_self"     />
+                    <area id="RB" alt="" title="" href="#" shape="poly" coords="577,269,548,268,536,289,521,320,494,347,463,360,462,393,516,369,561,319" style="outline:none;" target="_self"     />
+                    <area id="LB" alt="" title="" href="#" shape="poly" coords="334,358,329,380,301,371,264,348,242,323,228,274,228,264,246,260,289,314" style="outline:none;" target="_self"     />
                 </map>
+            </div>
+
+            <script>
+                document.getElementById("LH").onmouseover = function() {mouseOver(1)};
+                document.getElementById("LH").onmouseout = function() {mouseOut()};
+                document.getElementById("M").onmouseover = function() {mouseOver(2)};
+                document.getElementById("M").onmouseout = function() {mouseOut()};
+                document.getElementById("RH").onmouseover = function() {mouseOver(3)};
+                document.getElementById("RH").onmouseout = function() {mouseOut()};
+                document.getElementById("RB").onmouseover = function() {mouseOver(4)};
+                document.getElementById("RB").onmouseout = function() {mouseOut()};
+                document.getElementById("LB").onmouseover = function() {mouseOver(5)};
+                document.getElementById("LB").onmouseout = function() {mouseOut()};
+
+                function mouseOver(x) {
+                    var y = x*(-450);
+                    document.getElementById("arbre_total").style.backgroundPosition = "0 "+ y+"px";
+                }
+
+                function mouseOut() {
+                    document.getElementById("arbre_total").style.backgroundPosition = "0 0px";
+                }
+            </script>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <section class="main">
+                            <div class="mb-wrap mb-style-2 jack">
+                                <blockquote cite="#">
+                                    <p>
+                                        Cela revient à se moquer un peu du monde et du service public
+                                        même que de revendre de la sorte des œuvres du domaine public.</p>
+                                </blockquote>
+                                <div class="mb-attribution">
+
+                                    <cite><a target="_blank "href="https://fr.wikipedia.org/wiki/Jack_Lang">
+                                        <p class="mb-author"> Jack Lang</p>
+                                        ancien ministre de la culture
+                                    </a></cite>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <section class="main">
+                            <div class="mb-wrap mb-style-2 savoir">
+                                <blockquote cite="#">
+                                    <p>
+                                        Les pouvoirs publics ne devraient pas se décharger de leurs responsabilités
+                                        en matière de financement des institutions culturelles au profit des PPP.
+                                    </p>
+                                </blockquote>
+                                <div class="mb-attribution">
+
+                                    <cite><a target="_blank" href="http://www.savoirscom1.info/">
+                                        <p class="mb-author"> Savoir Com1</p>
+                                        Collectif fondé par des bibliothécaires</a></cite>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <section class="main">
+                            <div class="mb-wrap mb-style-2 bruno">
+                                <blockquote cite="#1">
+                                    <p>
+                                        Le refus de principe de tout type de tout partenariat n’obéissant pas
+                                        à ce mot d’ordre, conduirait en pratique à ralentir la
+                                        numérisation du patrimoine
+                                    </p>
+                                </blockquote>
+                                <div class="mb-attribution">
+
+                                    <cite><a href="https://fr.wikipedia.org/wiki/Bruno_Racine">
+                                        <p class="mb-author"> Bruno Racine </p>
+                                        Président de la BNF</a></cite>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
             </div>
 
             <div class="container text-center">
